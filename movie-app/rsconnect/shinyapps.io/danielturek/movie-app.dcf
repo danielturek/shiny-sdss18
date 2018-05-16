@@ -1,0 +1,10 @@
+name: movie-app
+title:
+username:
+account: danielturek
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 344168
+bundleId: 1377575
+url: https://danielturek.shinyapps.io/movie-app/
+when: 1526504281.343

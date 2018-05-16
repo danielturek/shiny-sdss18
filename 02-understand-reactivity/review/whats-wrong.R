@@ -1,7 +1,7 @@
 # UI ----
 ui <- fluidPage(
   
-  titlePanel("Let's do simple math!")
+  titlePanel("Let's do simple math!"),
   
   sidebarLayout(
   
@@ -10,11 +10,12 @@ ui <- fluidPage(
       sliderInput("x", 
                   "Select x", 
                   min = 1, max = 50, 
-                  value = 30)
+                  value = 30),
       
-      numericInput("Multiply by", 
+      numericInput("multiplier",
+                   "Multiply by", 
                    min = 1, max = 50, 
-                   value = 5),
+                   value = 5)
     ),
     
     mainPanel( 
@@ -27,7 +28,7 @@ ui <- fluidPage(
 # Server ----
 server <- function(input, output) {
   
-  mult_3        <- function(x, multiplier) { x * multiplier },
+  mult_3 <- function(x, multiplier) { x * multiplier }
   
   output$result <- renderText({ 
     mult_3(input$x, req(input$multiplier))
